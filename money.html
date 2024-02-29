@@ -199,6 +199,25 @@
     
     
             }
+            function newGame() {
+            gameOver = false;
+            score = 0;
+            locations = 0;
+            let reset = document.getElementsByTagName("img");
+            for (i = 0; i < reset.length; i++) {
+                reset[i].src = "Building.jpg"
+            }
+
+            monsterLocation = Math.floor(Math.random() * 35);
+            for (i = 0; i < fancyCoinLocations.length; i++) {
+                fancyCoinLocations[i] = Math.floor(Math.random() * 35);
+            }
+
+            document.getElementById("score").innerText = `score is : ${score}`;
+            document.getElementById("locations").innerText = `score is : ${locations}`;
+            document.getElementById("button").onclick = newGame;
+        }
+
       </script>
 
             
